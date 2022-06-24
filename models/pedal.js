@@ -1,6 +1,8 @@
 import mongoose from 'mongoose'
 
-const pedalSchema= new mongoose.Schema({
+const Schema = mongoose.Schema
+
+const pedalSchema = new Schema({
   company: String,
   model: String,
   effect: String,

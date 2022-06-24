@@ -1,6 +1,8 @@
 import mongoose from 'mongoose'
 
-const ampSchema= new mongoose.Schema({
+const Schema = mongoose.Schema
+
+const ampSchema = new Schema({
   company: String,
   model: String,
   year:{ type: Number, min: 1960 },

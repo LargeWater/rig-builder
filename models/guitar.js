@@ -1,6 +1,8 @@
 import mongoose from 'mongoose'
 
-const guitarSchema= new mongoose.Schema({
+const Schema = mongoose.Schema
+
+const guitarSchema = new Schema({
   company: String,
   model: String,
   color: String,
