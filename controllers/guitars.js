@@ -1,28 +1,29 @@
-import { Guitar } from '../models/guitar.js'
+import { Gear } from '../models/gear.js'
 
 function index(req, res) {
-
+  Gear.find({})
+  .then
 }
 
-function newGuitar(req, res) {
-  Guitar.find({})
-  .then(guitars => {
-    res.render('guitars/new', {
-      title: 'Add Guitar',
-      guitars
+function newGear(req, res) {
+  Gear.find({})
+  .then(gear => {
+    res.render('gear/new', {
+      title: 'Add Gear',
+      guitars,
     })
   })
 }
 
 function create(req, res){
-  Guitar.create(req.body)
-  .then(guitar => {
-    res.redirect('/guitars/new')
+  Gear.create(req.body)
+  .then(gear => {
+    res.redirect('/gear/new')
   })
 }
 
 export {
   index,
-  newGuitar as new,
+  newGear as new,
   create
 }
