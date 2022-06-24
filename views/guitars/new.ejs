@@ -1,0 +1,21 @@
+<%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/new.css">
+<%- include('../partials/nav') %>
+
+
+<main>
+  <h1><%= title %></h1>
+  <form id="new-form" action="/guitars" method="POST">
+    <label for="company-input">Company:</label>
+    <input type="text" name="company" id="company-input">
+    <label for="model-input">Model:</label>
+    <input type="text" name="model" id="model-input">
+    <label for="color-input">Color:</label>
+    <input type="text" name="color" id="color-input">
+    <label for="Year-input">Year:</label>
+    <input type="text" name="year" id="year-input">
+    <button type="submit">Add Guitar</button>
+  </form>
+</main>
+
+<%- include("../partials/footer") %>

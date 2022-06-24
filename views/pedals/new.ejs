@@ -1,0 +1,21 @@
+<%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/new.css">
+<%- include('../partials/nav') %>
+
+
+<main>
+  <h1><%= title %></h1>
+  <form id="new-form" action="/pedals" method="POST">
+    <label for="company-input">Company:</label>
+    <input type="text" name="company" id="company-input">
+    <label for="model-input">Model:</label>
+    <input type="text" name="model" id="model-input">
+    <label for="effect-input">Effect:</label>
+    <input type="text" name="effect" id="effect-input">
+    <label for="color-input">Color:</label>
+    <input type="text" name="color" id="color-input">
+    <button type="submit">Add Pedal</button>
+  </form>
+</main>
+
+<%- include("../partials/footer") %>

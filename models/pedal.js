@@ -3,7 +3,7 @@ import mongoose from 'mongoose'
 const pedalSchema= new mongoose.Schema({
   company: String,
   model: String,
-  color: String,
+  effect: String,
   year:{ type: Number, min: 1960 },
 }, {
   timestamps: true

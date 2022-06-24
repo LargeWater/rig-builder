@@ -8,7 +8,7 @@ html {
 *::after {
   /* All ::after pseudo-elements */
   /* height & width will now include border & padding by default but can be overridden as needed */
-  /* box-sizing: inherit; */
+  box-sizing: inherit;
 }
 
 /* resets font size to be 62.5% of the user preference - in most browser configurations this will be 10px */
