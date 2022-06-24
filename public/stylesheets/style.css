@@ -8,7 +8,7 @@ html {
 *::after {
   /* All ::after pseudo-elements */
   /* height & width will now include border & padding by default but can be overridden as needed */
-  box-sizing: inherit;
+  /* box-sizing: inherit; */
 }
 
 /* resets font size to be 62.5% of the user preference - in most browser configurations this will be 10px */
@@ -42,6 +42,8 @@ h1 {
   font-size: 4em;
 }
 
-#avatar {
+img {
   border-radius: 50%;
+  max-width: 40px;
+  max-height: 40px;
 }

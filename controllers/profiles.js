@@ -4,7 +4,6 @@ function index(req, res) {
   let modelQuery = req.query.name
     ? { name: new RegExp(req.query.name, 'i') }
     : {}
-  // Sorting by name
   Profile.find(modelQuery)
   .sort("name")
   .then(profiles => {
@@ -21,5 +20,5 @@ function index(req, res) {
 
 
 export {
-  index
+  index,
 }
