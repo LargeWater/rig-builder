@@ -39,5 +39,9 @@ main {
 }
 
 h1 {
-  font-size: 3.6rem;
+  font-size: 4em;
+}
+
+#avatar {
+  border-radius: 50%;
 }
