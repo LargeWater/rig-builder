@@ -7,12 +7,11 @@ const gearSchema = new Schema({
   company: String,
   model: String,
   color: String,
-  year:{ type: Number, min: 1960 },
 }, {
   timestamps: true
 })
 
-const Gear = mongoose.model('Geaar', gearSchema)
+const Gear = mongoose.model('Gear', gearSchema)
 
 export {
   Gear

@@ -39,6 +39,7 @@ main {
 }
 
 h1 {
+  margin: 2%;
   font-size: 4em;
   color: #1C110A
 }
@@ -49,12 +50,22 @@ img {
   max-height: 40px;
 }
 
-#logout{
+#logout {
   background-color: #15616D;
   color: #FFECD1;
+}
+#submit {
+  background-color: #15616D;
+  color: #FFECD1;
+  border: 2px solid #1C110A;
 }
 
 #logout:hover {
   color: #15616D;
   background-color: #FFECD1;
+}
+
+#submit:hover {
+  color: #FFECD1;
+  background-color: #78290F;
 }

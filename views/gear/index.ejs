@@ -1,0 +1,17 @@
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+<section>
+  <% gear.forEach(gear => { %>
+    <div class="card" style="width: 18rem;">
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item"><%= gear.company %> <%= gear.model %></li>
+        <li class="list-group-item"><%= gear.type %></li>
+        <li class="list-group-item"><%= gear.color %></li>
+      </ul>
+    </div>
+  <% }) %>
+</section>
+
+
+
+<%- include('../partials/footer') %>

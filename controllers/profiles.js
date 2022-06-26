@@ -8,6 +8,7 @@ function index(req, res) {
   .sort("name")
   .then(profiles => {
     res.render("profiles/index", { 
+      title: 'Profiles',
       profiles: profiles, 
       name: req.query.name,
     })
@@ -17,7 +18,23 @@ function index(req, res) {
   })
 }
 
+function show(req, res) {
+  Profile.findById(req.params.id)
+  .then(profile => {
+    const isSelf = profile._id.equals(req.user.profile._id)
+    res.render("profiles/show", {
+      title: `${profile.name}'s profile`,
+      profile,
+      isSelf
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/')
+  })
+}
 
 export {
   index,
+  show
 }
