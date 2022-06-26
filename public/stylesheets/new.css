@@ -1,0 +1,18 @@
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.mb-3 {
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+#new-form{
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}

@@ -17,7 +17,7 @@ html {
 }
 
 body {
-  background-color: gray;
+  background-color: #FFECD1;
   /* Use a system font, if none are available use an available sans-sarif font */
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
     Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
@@ -25,7 +25,7 @@ body {
 }
 
 nav {
-  background-color: white;
+  background-color: #A15E49;
   font-size: 1.6rem;
   display: flex;
   justify-content: center;
@@ -40,10 +40,21 @@ main {
 
 h1 {
   font-size: 4em;
+  color: #1C110A
 }
 
 img {
   border-radius: 50%;
   max-width: 40px;
   max-height: 40px;
+}
+
+#logout{
+  background-color: #15616D;
+  color: #FFECD1;
+}
+
+#logout:hover {
+  color: #15616D;
+  background-color: #FFECD1;
 }

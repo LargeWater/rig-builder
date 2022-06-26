@@ -6,15 +6,27 @@
 <main>
   <h1><%= title %></h1>
   <form id="new-form" action="/gear" method="POST">
-    <label for="company-input">Company:</label>
-    <input type="text" name="company" id="company-input">
-    <label for="model-input">Model:</label>
-    <input type="text" name="model" id="model-input">
-    <label for="color-input">Color:</label>
-    <input type="text" name="color" id="color-input">
-    <label for="Year-input">Year:</label>
-    <input type="text" name="year" id="year-input">
-    <button type="submit">Add Gear</button>
+    <div class="mb-3">
+      <label for="type-input" class="col-sm-2 col-form-label col-form-label-lg">Type</label>
+      <input type="text" class="form-control-lg" id="type-input" name="type" placeholder="Guitar, pedal, amp, etc.">
+    </div>
+    <div class="mb-3">
+      <label for="company-input" class="col-sm-2 col-form-label col-form-label-lg">Company</label>
+      <input type="text" class="form-control-lg" id="company-input" name="company" placeholder="Fender, Boss, Gretsch, Marshall, etc.">
+    </div>
+    <div class="mb-3">
+      <label for="model-input" class="col-sm-2 col-form-label col-form-label-lg">Model</label>
+      <input type="text" class="form-control-lg" id="model-input" name="model" placeholder="Stratocaster, ">
+    </div>
+    <div class="mb-3">
+      <label for="color-input" class="col-sm-2 col-form-label col-form-label-lg">Color</label>
+      <input type="text" class="form-control-lg" id="color-input" name="color" placeholder="Color:">
+    </div>
+    <div class="mb-3">
+      <label for="year-input" class="col-sm-2 col-form-label col-form-label-lg">Color</label>
+      <input type="text" class="form-control-lg" id="year-input" name="year" placeholder="Year:">
+    </div>
+      <button type="submit" class="btn btn-primary btn-lg">Add Gear</button>
   </form>
 </main>
 

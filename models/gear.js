@@ -12,7 +12,7 @@ const gearSchema = new Schema({
   timestamps: true
 })
 
-const Gear = mongoose.model('Guitar', guitarSchema)
+const Gear = mongoose.model('Geaar', gearSchema)
 
 export {
   Gear

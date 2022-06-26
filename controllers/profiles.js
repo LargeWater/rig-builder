@@ -10,7 +10,6 @@ function index(req, res) {
     res.render("profiles/index", { 
       profiles: profiles, 
       name: req.query.name,
-      user: req.user
     })
   })
   .catch(err => {
