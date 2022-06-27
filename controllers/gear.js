@@ -45,9 +45,14 @@ function show(req, res){
   })
 }
 
+function deleteGear(req, res) {
+
+}
+
 export {
   index,
   newGear as new,
   create,
-  show
+  show,
+  deleteGear as delete
 }

@@ -8,6 +8,7 @@ router.get('/', gearCtrl.index)
 router.get('/new', isLoggedIn, gearCtrl.new)
 router.get('/:id', gearCtrl.show)
 router.post('/', isLoggedIn, gearCtrl.create)
+router.delete('/:id', isLoggedIn, gearCtrl.delete)
 
 export {
   router

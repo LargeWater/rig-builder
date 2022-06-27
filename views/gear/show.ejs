@@ -3,6 +3,14 @@
 <%- include('../partials/nav') %>
 <section>
   <h1><%= gear.company %> <%= gear.model %></h1>
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This <%= gear.type %> was created by ___ and theirs is <%= gear.color %></p>
+      <form action="/gear/<%= gear._id %>?_method=DELETE" method="POST">
+        <button class="btn btn-primary" type="submit">Delete this?</button>
+    </div>
+  </div>
 </section>
 
 
