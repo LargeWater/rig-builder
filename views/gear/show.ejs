@@ -2,16 +2,7 @@
 <link rel="stylesheet" href="/stylesheets/gear/show.css">
 <%- include('../partials/nav') %>
 <section>
-  <% gear.forEach(gear => { %>
-    <div class="card text-center" style="width: 18rem;">
-      <a href='/gear/:id'><ul class="list-group list-group-flush">
-        <li class="list-group-item"><%= gear.company %> <%= gear.model %></li>
-        <li class="list-group-item"><%= gear.type %></li>
-        <li class="list-group-item"><%= gear.color %></li>
-      </ul>
-      </a>
-    </div>
-  <% }) %>
+  <h1><%= gear.company %> <%= gear.model %></h1>
 </section>
 
 

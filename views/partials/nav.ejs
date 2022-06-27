@@ -23,25 +23,25 @@
             <a class="nav-link" href="/profiles">All Profiles</a>
           </li>
         </ul>
-        <div id='avatar'><% if (user?.profile.avatar) { %>
-            <img
-              src="<%= user.profile.avatar %>"
-              alt="<%= user.profile.name %> avatar"
-            />
-        <% } %>
-        </div>
-        <% if (user) { %>
-          <a href="/auth/logout">
-            <input class="btn btn-lg" type="submit" value="Logout" id="logout">
-          </a>
-        <% } else { %>
-          <a href="/auth/google" class="siwg-link">
-            <button type="submit" class="siwg">
-              <img id="siwg-image" alt="Sign in with Google" />
-            </button>
-          </a>
-        <% } %>
       </div>
+      <div id='avatar'><% if (user?.profile.avatar) { %>
+          <img
+            src="<%= user.profile.avatar %>"
+            alt="<%= user.profile.name %> avatar"
+          />
+      <% } %>
+      </div>
+      <% if (user) { %>
+        <a href="/auth/logout">
+          <input class="btn btn-lg" type="submit" value="Logout" id="logout">
+        </a>
+      <% } else { %>
+        <a href="/auth/google" class="siwg-link">
+          <button type="submit" class="siwg">
+            <img id="siwg-image" alt="Sign in with Google" />
+          </button>
+        </a>
+      <% } %>
     </div>
   </nav>
 

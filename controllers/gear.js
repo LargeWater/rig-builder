@@ -34,7 +34,10 @@ function create(req, res){
 function show(req, res){
   Gear.findById(req.params.id)
   .then(gear => {
-    res.render('gear/show')
+    res.render('gear/show', {
+      gear,
+      title: `${gear.company} ${gear.model}`
+    })
   })
   .catch(err => {
     console.log(err)
