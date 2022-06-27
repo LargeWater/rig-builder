@@ -21,9 +21,10 @@ function newGear(req, res) {
 }
 
 function create(req, res){
+  req.body.owner = req.user.profile._id
   Gear.create(req.body)
   .then(gear => {
-    res.redirect('/gear/new')
+    res.redirect('/gear/')
   })
   .catch(err => {
     console.log(err)
@@ -46,7 +47,21 @@ function show(req, res){
 }
 
 function deleteGear(req, res) {
-
+  Gear.findById(req.params.id)
+  .then(gear => {
+    if(gear.owner?.equals(req.user.profile._id)) {
+      gear.delete()
+      .then(() => {
+        res.redirect('/gear')
+      })
+    } else {
+      throw new Error ('NOT AUTHORIZED')
+    }
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect("/gear")
+  })
 }
 
 export {

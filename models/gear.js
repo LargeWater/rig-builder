@@ -7,6 +7,7 @@ const gearSchema = new Schema({
   company: String,
   model: String,
   color: String,
+  owner: {type: Schema.Types.ObjectId, ref: "Profile"}
 }, {
   timestamps: true
 })
