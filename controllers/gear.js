@@ -31,8 +31,20 @@ function create(req, res){
   })
 }
 
+function show(req, res){
+  Gear.findById(req.params.id)
+  .then(gear => {
+    res.render('gear/show')
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/gear')
+  })
+}
+
 export {
   index,
   newGear as new,
-  create
+  create,
+  show
 }
