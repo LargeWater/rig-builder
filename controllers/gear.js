@@ -66,10 +66,40 @@ function deleteGear(req, res) {
   })
 }
 
+function edit(req, res) {
+  Gear.findById(req.params.id)
+  .then(gear => {
+    res.render("gear/edit", {
+      gear,
+      title: `Edit Your ${gear.model}`,
+    })
+  })
+  .catch(error => {
+    console.log(error)
+    res.redirect('/gear')
+  })
+}
+
+function update(req, res) {
+  Gear.findByIdAndUpdate(req.params.id, req.body, {new: true})
+  .then(gear => {
+    res.redirect(`/gear/${gear._id}`)
+  })
+  .catch(error => {
+    console.log(error)
+    res.redirect('/gear')
+  })
+  for (let key in req.body) {
+    if (req.body[key] === '') delete req.body[key]
+  }
+}
+
 export {
   index,
   newGear as new,
   create,
   show,
-  deleteGear as delete
+  deleteGear as delete,
+  edit,
+  update
 }

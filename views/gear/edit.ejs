@@ -5,7 +5,7 @@
 
 <main>
   <h1><%= title %></h1>
-  <form id="new-form" action="/gear/<%= gear._id %>?method=PUT" method="POST"  autocomplete="off">
+  <form id="new-form" action="/gear/<%= gear._id %>?_method=PUT" method="POST">
     <div class="mb-3">
       <label for="type-select">Type</label>
       <select type="text" id="type-select" name="type">
