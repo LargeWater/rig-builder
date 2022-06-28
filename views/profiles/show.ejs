@@ -11,11 +11,11 @@
       >
     </div>
   <% } %>
-<% Gear.forEach(gear => { %>
+<% gear.forEach(gear => { %>
     <div class="card" style="width: 18rem;">
       <div class="card-body">
         <h3 class="card-title"><%= gear.company %> <%= gear.model %></h3>
-        <p class="card-text">This <%= gear.model %> is a <%= gear.color %> <%= gear.company %> <%= gear.type %> created by <%= gear.owner.name %></p>
+        <p class="card-text">This <%= gear.model %> is a <%= gear.color %> <%= gear.company %> <%= gear.type %>. </p>
         <a href="/gear/<%= gear._id %>">Learn more</a>
       </div>
     </div>
