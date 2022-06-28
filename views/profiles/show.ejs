@@ -12,7 +12,6 @@
     </div>
   <% } %>
 <% Gear.forEach(gear => { %>
-  <% if(gear.owner._id === profile._id) { %>
     <div class="card" style="width: 18rem;">
       <div class="card-body">
         <h3 class="card-title"><%= gear.company %> <%= gear.model %></h3>

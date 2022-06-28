@@ -1,5 +1,6 @@
 import { Router } from 'express'
-import { isLoggedIn } from '../middleware/middleware'
+import { isLoggedIn } from '../middleware/middleware.js'
+import * as commentsCtrl from '../controllers/comments.js'
 
 const router = Router()
 
