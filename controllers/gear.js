@@ -25,7 +25,7 @@ function create(req, res){
   req.body.owner = req.user.profile._id
   Gear.create(req.body)
   .then(gear => {
-    res.redirect('/gear/')
+    res.redirect('/gear')
   })
   .catch(err => {
     console.log(err)

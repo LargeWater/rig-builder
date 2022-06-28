@@ -11,17 +11,16 @@
       >
     </div>
   <% } %>
-  <% if (comment) { comment.forEach( comment => { %> 
-      <p>
-        <%= comment.content %>
-      </p>
-      <div>
-        <%= comment.rating %>/5
+<% Gear.forEach(gear => { %>
+  <% if(gear.owner._id === profile._id) { %>
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h3 class="card-title"><%= gear.company %> <%= gear.model %></h3>
+        <p class="card-text">This <%= gear.model %> is a <%= gear.color %> <%= gear.company %> <%= gear.type %> created by <%= gear.owner.name %></p>
+        <a href="/gear/<%= gear._id %>">Learn more</a>
       </div>
-      <h3> <%=comment.author</h3>
-
-
-    <% })} %>
+    </div>
+<% }) %>
 </main>
 
 <%- include('../partials/footer') %>
