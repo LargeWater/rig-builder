@@ -11,6 +11,17 @@
       >
     </div>
   <% } %>
+  <% if (comment) { comment.forEach( comment => { %> 
+      <p>
+        <%= comment.content %>
+      </p>
+      <div>
+        <%= comment.rating %>/5
+      </div>
+      <h3> <%=comment.author</h3>
+
+
+    <% })} %>
 </main>
 
 <%- include('../partials/footer') %>
