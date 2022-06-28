@@ -2,13 +2,17 @@
 <link rel="stylesheet" href="/stylesheets/gear/show.css">
 <%- include('../partials/nav') %>
 <section>
-  <h1><%= gear.company %> <%= gear.model %></h1>
+  <h1> <%= gear.owner.name %>'s <%= gear.company %> <%= gear.model %></h1>
   <div class="card" style="width: 18rem;">
     <div class="card-body">
       <h5 class="card-title">Card title</h5>
-      <p class="card-text">This <%= gear.type %> was created by ___ and theirs is <%= gear.color %></p>
+      <p class="card-text">This <%= gear.type %> was created by <%= gear.owner.name %> and theirs is <%= gear.color %></p>
+      <% if (gear.owner.equals(user?.profile._id)) { %>
+        <a href="/gear/<%= gear._id%>/edit">Edit</a>
       <form action="/gear/<%= gear._id %>?_method=DELETE" method="POST">
-        <button class="btn btn-primary" type="submit">Delete this?</button>
+        <button class="btn btn-primary" type="submit">Delete</button>
+      </form>
+      <% } %>
     </div>
   </div>
 </section>

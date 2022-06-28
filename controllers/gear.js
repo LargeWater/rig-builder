@@ -2,6 +2,7 @@ import { Gear } from '../models/gear.js'
 
 function index(req, res) {
   Gear.find({})
+  .populate('owner')
   .then(gear => {
     res.render('gear/index', {
       gear,
@@ -34,10 +35,11 @@ function create(req, res){
 
 function show(req, res){
   Gear.findById(req.params.id)
+  .populate('owner')
   .then(gear => {
     res.render('gear/show', {
       gear,
-      title: `${gear.company} ${gear.model}`
+      title: `${gear.owner.name}'s ${gear.model}`
     })
   })
   .catch(err => {

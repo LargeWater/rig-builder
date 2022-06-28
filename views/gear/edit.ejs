@@ -5,7 +5,7 @@
 
 <main>
   <h1><%= title %></h1>
-  <form id="new-form" action="/gear" method="POST" autocomplete="off">
+  <form id="new-form" action="/gear/<%= gear._id %>?method=PUT" method="POST"  autocomplete="off">
     <div class="mb-3">
       <label for="type-select">Type</label>
       <select type="text" id="type-select" name="type">
@@ -22,14 +22,14 @@
     <div class="mb-3">
       <label for="model-input" class="col-sm-2 col-form-label col-form-label-lg">Model</label>
       <br>
-      <input type="text" class="form-control-lg" id="model-input" name="model" placeholder="Stratocaster, Plexi, etc.">
+      <input type="text" class="form-control-lg" id="model-input" name="model" value='' >
     </div>
     <div class="mb-3">
       <label for="color-input" class="col-sm-2 col-form-label col-form-label-lg">Color</label>
       <br>
       <input type="text" class="form-control-lg" id="color-input" name="color" placeholder="Color:">
     </div>
-      <button type="submit" class="btn btn-primary btn-lg" id="submit">Add Gear</button>
+      <button type="submit" class="btn btn-primary btn-lg" id="submit">Save Gear</button>
   </form>
 </main>
 
