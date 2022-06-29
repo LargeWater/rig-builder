@@ -4,24 +4,26 @@
 <main>
   <h1><%= profile.name %>'s Rig</h1>
   <br>
-  <% if (gear.owner === profile._id) { %>
-    <% gear.forEach(gear => { %>
-      <div class="card" style="width: 18rem;">
-        <div class="card-body">
-          <h3 class="card-title"><%= gear.company %> <%= gear.model %></h3>
-          <p class="card-text">This <%= gear.model %> is a <%= gear.color %> <%= gear.company %> <%= gear.type %>. </p>
-          <a href="/gear/<%= gear._id %>">Learn more</a>
-        </div>
+  <% profile.gear?.forEach(gear => { %>
+    <% if (gear.owner === profile._id) { %> 
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h3 class="card-title"><%= gear.company %> <%= gear.model %></h3>
+        <p class="card-text">This <%= gear.model %> is a <%= gear.color %> <%= gear.company %> <%= gear.type %>. </p>
+        <a href="/gear/<%= gear._id %>">Learn more</a>
       </div>
-    <br>
-<% })} %>
+    </div>
+  <br>
+<% }}) %>
 
-<% comments.forEach(comment => { %>
+<% profile.comments?.forEach(comment => { %>
     <p id="comment-id"><%= comment.content %></p>
     <div id="author"><%= comment.author.name %></div>
     <div id="rating-id"><%= comment.rating %>/5</div>
   <% }) %>
 <form action="/comments" method="POST">
+  <input type="text" hidden name="profile" value="<%= profile._id %>">
+  <input type="text" hidden name="author" value="<%= user.profile.name %>">
   <div class="form-group">
     <label for="content-input">Leave a comment!</label>
     <textarea class="form-control" id="content-input" rows="3" name="content" placeholder="Say something about their collection"></textarea>

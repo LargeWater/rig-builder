@@ -3,10 +3,7 @@ import { Gear } from "../models/gear.js";
 import { Comment } from '../models/comment.js'
 
 function index(req, res) {
-  let modelQuery = req.query.name
-    ? { name: new RegExp(req.query.name, "i") }
-    : {};
-  Profile.find(modelQuery)
+  Profile.find({})
     .sort("name")
     .then((profiles) => {
       res.render("profiles/index", {
@@ -22,26 +19,22 @@ function index(req, res) {
 
 function show(req, res) {
   Profile.findById(req.params.id)
-    .then((profile) => {
-      const isSelf = profile._id?.equals(req.user.profile._id);
-      Gear.find({})
-      .then((gear) => {
-        Comment.find({})
-        .then((comment) => {
-          res.render("profiles/show", {
-            title: `${profile.name}'s profile`,
-            gear,
-            profile,
-            comment,
-            isSelf,
-          });
-        })
-      });
-    })
-    .catch((err) => {
-      console.log(err);
-      res.redirect("/");
+  .populate('gear')
+  .populate('comments')
+  .then((profile) => {
+    const isSelf = profile._id?.equals(req.user.profile._id);
+    console.log(profile.gear)
+    console.log(profile.comments)
+    res.render("profiles/show", {
+      title: `${profile.name}'s profile`,
+      profile,
+      isSelf,
     });
+  })
+  .catch((err) => {
+    console.log(err);
+    res.redirect("/");
+  });
 }
 
 export { index, show };

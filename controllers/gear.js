@@ -37,6 +37,7 @@ function show(req, res){
   Gear.findById(req.params.id)
   .populate('owner')
   .then(gear => {
+    console.log(gear.owner._id)
     res.render('gear/show', {
       gear,
       title: `${gear.owner.name}'s ${gear.model}`
