@@ -1,4 +1,30 @@
 .card-body {
   align-items: center;
   justify-content: center;
+  text-align: center;
+}
+
+.card{
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.card-deck{
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#show-section{
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 2em;
+}
+
+h1{
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 3em;
 }

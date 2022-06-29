@@ -1,20 +1,23 @@
 <%- include('../partials/html-head') %>
 <link rel="stylesheet" href="/stylesheets/gear/show.css">
 <%- include('../partials/nav') %>
-<section>
+<section id="show-section">
   <h1> <%= gear.owner.name %>'s <%= gear.company %> <%= gear.model %></h1>
-  <div class="card" style="width: 18rem;">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This <%= gear.type %> was created by <%= gear.owner.name %> and theirs is <%= gear.color %></p>
-      <% if (gear.owner.equals(user?.profile._id)) { %>
-        <a href="/gear/<%= gear._id%>/edit">Edit</a>
-      <form action="/gear/<%= gear._id %>?_method=DELETE" method="POST">
-        <button class="btn btn-primary" type="submit">Delete</button>
-      </form>
-      <% } %>
+  <div class="card-deck">
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <p class="card-text">This <%= gear.type %> was created by <%= gear.owner.name %> and 
+        <%= gear.color ? `theirs is ${gear.color}.` : "they didn't specify a color." %>
+        </p>
+      </div>
     </div>
   </div>
+  <% if (gear.owner.equals(user?.profile._id)) { %>
+    <a href="/gear/<%= gear._id%>/edit">Edit</a>
+  <form action="/gear/<%= gear._id %>?_method=DELETE" method="POST">
+    <button class="btn btn-primary" type="submit">Delete</button>
+  </form>
+  <% } %>
 </section>
 
 

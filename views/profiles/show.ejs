@@ -11,6 +11,7 @@
       >
     </div>
   <% } %>
+  <br>
 <% gear.forEach(gear => { %>
     <div class="card" style="width: 18rem;">
       <div class="card-body">
@@ -19,7 +20,26 @@
         <a href="/gear/<%= gear._id %>">Learn more</a>
       </div>
     </div>
+    <br>
 <% }) %>
+<form>
+  <div class="form-group">
+    <label for="content-input">Leave a comment!</label>
+    <textarea class="form-control" id="content-input" rows="3" value="content" placeholder="Say something about their collection"></textarea>
+  </div>
+  <div class="form-group">
+    <label for="rating-input">Rate their collection</label>
+    <select class="form-control" id="rating-input" name="rating">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+  </div>
+  <br>
+  <button type="submit" class="btn btn-primary btn-lg" id="submit">Submit</button>
+</form>
 </main>
 
 <%- include('../partials/footer') %>
