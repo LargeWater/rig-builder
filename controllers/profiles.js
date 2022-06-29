@@ -1,5 +1,6 @@
 import { Profile } from "../models/profile.js";
 import { Gear } from "../models/gear.js";
+import { Comment } from '../models/comment.js'
 
 function index(req, res) {
   let modelQuery = req.query.name
@@ -25,12 +26,16 @@ function show(req, res) {
       const isSelf = profile._id?.equals(req.user.profile._id);
       Gear.find({})
       .then((gear) => {
-        res.render("profiles/show", {
-          title: `${profile.name}'s profile`,
-          gear,
-          profile,
-          isSelf,
-        });
+        Comment.find({})
+        .then((comment) => {
+          res.render("profiles/show", {
+            title: `${profile.name}'s profile`,
+            gear,
+            profile,
+            comment,
+            isSelf,
+          });
+        })
       });
     })
     .catch((err) => {
