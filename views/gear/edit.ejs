@@ -9,25 +9,26 @@
     <div class="mb-3">
       <label for="type-select">Type</label>
       <select type="text" id="type-select" name="type">
-        <option value="Guitar">Guitar</option>
-        <option value="Pedal">Pedal</option>
-        <option value="Amp">Amp</option>
+        <option value="<%= gear.type %>"><%= gear.type %></option>
+        <option value="guitar">guitar</option>
+        <option value="pedal">pedal</option>
+        <option value="amp">amp</option>
       </select>
     </div>
     <div class="mb-3">
       <label for="company-input" class="col-sm-2 col-form-label col-form-label-lg">Company</label>
       <br>
-      <input type="text" class="form-control-lg" id="company-input" name="company" placeholder="Fender, Boss, etc.">
+      <input type="text" class="form-control-lg" id="company-input" name="company" value="<%= gear.company %>">
     </div>
     <div class="mb-3">
       <label for="model-input" class="col-sm-2 col-form-label col-form-label-lg">Model</label>
       <br>
-      <input type="text" class="form-control-lg" id="model-input" name="model" value='' >
+      <input type="text" class="form-control-lg" id="model-input" name="model" value='<%= gear.model %>' >
     </div>
     <div class="mb-3">
       <label for="color-input" class="col-sm-2 col-form-label col-form-label-lg">Color</label>
       <br>
-      <input type="text" class="form-control-lg" id="color-input" name="color" placeholder="Color:">
+      <input type="text" class="form-control-lg" id="color-input" name="color" placeholder="Color:" value="<%= gear.color %>">
     </div>
       <button type="submit" class="btn btn-primary btn-lg" id="submit">Save Gear</button>
   </form>

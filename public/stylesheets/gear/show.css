@@ -8,12 +8,14 @@
   align-items: center;
   justify-content: center;
   text-align: center;
+  background-color: #FFECD1;
 }
 .card-deck{
   align-items: center;
   justify-content: center;
   text-align: center;
 }
+
 
 #show-section{
   align-items: center;
@@ -27,4 +29,9 @@ h1{
   justify-content: center;
   text-align: center;
   font-size: 3em;
+}
+
+.card-deck{
+  display: flex;
+  flex-wrap: wrap;
 }

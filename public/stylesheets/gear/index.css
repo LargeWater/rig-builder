@@ -4,7 +4,7 @@
   padding: 2% 0;
   margin: 2% auto;
   display: flex;
-  font-size: 2em;
+  /* font-size: 2em; */
   background-color: #15616D;
   color: #FFECD1;
 }
@@ -31,3 +31,15 @@ a:hover{
   color:#A15E49;
 }
 
+.card-title{
+  font-size: 2rem;
+}
+
+.card-text{
+  font-size: 1.6rem;
+}
+
+.card-deck{
+  display: flex;
+  flex-wrap: wrap;
+}
