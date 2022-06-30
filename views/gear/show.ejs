@@ -15,7 +15,7 @@
   <% if (gear.owner.equals(user?.profile._id)) { %>
     <a href="/gear/<%= gear._id%>/edit">Edit</a>
   <form action="/gear/<%= gear._id %>?_method=DELETE" method="POST">
-    <button class="btn btn-primary" type="submit">Delete</button>
+    <button id="delete-btn" class="btn btn-primary" type="submit">Delete</button>
   </form>
   <% } %>
 </section>

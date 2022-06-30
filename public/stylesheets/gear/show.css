@@ -37,3 +37,19 @@ h1{
   display: flex;
   flex-wrap: wrap;
 }
+
+#delete-btn{
+  background-color: #78290F;
+  color:#FFECD1;
+  border: 1px solid #1C110A;
+}
+
+#delete-btn:hover{
+  background-color: #1C110A;
+  color:#FFECD1;
+  border: 1px solid #78290F;
+}
+
+a{
+  color: #78290F;
+}
