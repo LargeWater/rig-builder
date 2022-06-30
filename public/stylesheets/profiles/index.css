@@ -8,6 +8,7 @@
   background-color: #15616D;
   border-radius: 5px;
   border: 1px solid #1C110A;
+  box-shadow: 3px 2px 7px #1C110A;
 }
 
 .card-title{
