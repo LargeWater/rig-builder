@@ -40,3 +40,7 @@
 .card-link:hover{
   color: #A15E49;
 }
+
+.comment-id{
+  font-size: 1.2rem;
+}

@@ -18,11 +18,9 @@
 </div>
 <h2 id="comments-header">Comments</h2>
 <% profile.comments?.forEach(comment => { %>
-    <div class="card comment-card">
-      <p id="comment-id"><%= comment.content %></p>
-      <div id="author"><%= comment.author.name %></div>
-      <div id="rating-id"><%= comment.rating %>/5</div>
-    </div>
+    <p id="comment-id"><%= comment.content %></p>
+    <div id="author"><%= comment.author.name %></div>
+    <div id="rating-id"><%= comment.rating %>/5</div>
   <% }) %>
 <form action="/comments" method="POST">
   <input type="text" hidden name="profile" value="<%= profile._id %>">
