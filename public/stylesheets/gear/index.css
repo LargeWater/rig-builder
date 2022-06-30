@@ -7,6 +7,8 @@
   /* font-size: 2em; */
   background-color: #15616D;
   color: #FFECD1;
+  border-radius: 5px;
+  border: 1px solid #1C110A;
 }
 
 .list-group-item {

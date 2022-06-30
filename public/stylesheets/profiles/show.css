@@ -5,3 +5,37 @@
 .form-group{
   font-size: 1.8rem;
 }
+
+#comment-id{
+  font-size: 1rem;
+}
+
+.card {
+  align-items: center;
+  justify-content: left;
+  padding: 2% 0;
+  /* margin: 2% auto; */
+  display: flex;
+  flex-wrap: wrap;
+  /* font-size: 2em; */
+  background-color: #15616D;
+  border-radius: 5px;
+  border: 1px solid #1C110A;
+}
+
+.card-container{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card-title,
+.card-text{
+  color: #FFECD1;
+}
+
+.card-link{
+  color: #FFECD1
+}
+.card-link:hover{
+  color: #A15E49;
+}

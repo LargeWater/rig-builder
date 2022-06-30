@@ -1,0 +1,21 @@
+.card {
+  align-items: center;
+  justify-content: left;
+  padding: 2% 0;
+  margin: 2% auto;
+  display: flex;
+  /* font-size: 2em; */
+  background-color: #15616D;
+  border-radius: 5px;
+  border: 1px solid #1C110A;
+}
+
+.card-title{
+  color: #FFECD1;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}

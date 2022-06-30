@@ -29,6 +29,7 @@ nav {
   font-size: 1.6rem;
   /* display: flex; */
   /* justify-content: center; */
+  border-bottom: 1px solid #1C110A;
 }
 
 .nav-link:hover{
@@ -37,6 +38,7 @@ nav {
 
 main {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -50,13 +52,17 @@ h1 {
 
 img {
   border-radius: 50%;
+  margin-right: 2%;
   max-width: 40px;
   max-height: 40px;
+  border: 1px solid #1C110A;
 }
 
 #logout {
   background-color: #15616D;
   color: #FFECD1;
+  margin-left: 5%;
+  border: 1px solid #1C110A;
 }
 #submit {
   background-color: #15616D;
@@ -73,3 +79,4 @@ img {
   color: #FFECD1;
   background-color: #78290F;
 }
+

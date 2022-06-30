@@ -4,17 +4,19 @@
 <main>
   <h1><%= profile.name %>'s Rig</h1>
   <br>
+  <div class="cardContainer">
   <% profile.gear?.forEach(gear => { %>
     <div class="card" style="width: 18rem;">
       <div class="card-body">
         <h3 class="card-title"><%= gear.company %> <%= gear.model %></h3>
         <p class="card-text">This <%= gear.model %> is a <%= gear.color %> <%= gear.company %> <%= gear.type %>. </p>
-        <a href="/gear/<%= gear._id %>">Learn more</a>
+        <a class="card-link" href="/gear/<%= gear._id %>">Learn more</a>
       </div>
     </div>
   <br>
 <% }) %>
-
+</div>
+<h2 id="comments-header">Comments</h2>
 <% profile.comments?.forEach(comment => { %>
     <p id="comment-id"><%= comment.content %></p>
     <div id="author"><%= comment.author.name %></div>
