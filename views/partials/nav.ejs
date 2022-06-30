@@ -24,7 +24,8 @@
           </li>
         </ul>
       </div>
-      <div id='avatar'><% if (user?.profile.avatar) { %>
+      <% if (user?.profile.avatar) { %>
+      <div id='avatar'>
           <img
             src="<%= user.profile.avatar %>"
             alt="<%= user.profile.name %> avatar"
