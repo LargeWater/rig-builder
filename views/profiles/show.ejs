@@ -5,7 +5,6 @@
   <h1><%= profile.name %>'s Rig</h1>
   <br>
   <% profile.gear?.forEach(gear => { %>
-    <% if (gear.owner === profile._id) { %> 
     <div class="card" style="width: 18rem;">
       <div class="card-body">
         <h3 class="card-title"><%= gear.company %> <%= gear.model %></h3>
@@ -14,7 +13,7 @@
       </div>
     </div>
   <br>
-<% }}) %>
+<% }) %>
 
 <% profile.comments?.forEach(comment => { %>
     <p id="comment-id"><%= comment.content %></p>

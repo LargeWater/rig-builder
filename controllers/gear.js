@@ -1,4 +1,5 @@
 import { Gear } from '../models/gear.js'
+import { Profile } from '../models/profile.js'
 
 function index(req, res) {
   Gear.find({})
@@ -25,7 +26,14 @@ function create(req, res){
   req.body.owner = req.user.profile._id
   Gear.create(req.body)
   .then(gear => {
-    res.redirect('/gear')
+    Profile.findById(req.user.profile._id)
+    .then(profile => {
+      profile.gear.push(gear._id)
+      profile.save()
+      .then(() => {
+        res.redirect('/gear/index')
+      })
+    })
   })
   .catch(err => {
     console.log(err)

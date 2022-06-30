@@ -11,8 +11,6 @@ function create(req, res) {
   .then(comment => {
     Profile.findById(req.user.profile._id)
     .then(profile =>{
-      console.log(comment._id)
-      console.log(profile._id)
       profile.comments.push(comment._id)
       profile.save()
       .then(() =>{
