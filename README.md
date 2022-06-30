@@ -6,7 +6,7 @@ An app to create a rig by adding guitars, guitar pedals and amps to your persona
 
 [Rig Builder](https://nicks-rig-builder.herokuapp.com/) 
 
-~Screenshot goes here~
+![screenshot](public/images/screenshot.png)
 
 I used [Trello](https://trello.com/b/X2nOStz9/rig-builder) to plan this app and keep track of where I was and what steps were next. 
 
