@@ -1,6 +1,6 @@
 import { Profile } from "../models/profile.js";
 // import { Gear } from "../models/gear.js";
-// import { Comment } from '../models/comment.js'
+import { Comment } from '../models/comment.js'
 
 function index(req, res) {
   Profile.find({})

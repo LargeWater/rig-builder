@@ -1,6 +1,6 @@
-/* html {
+html {
   box-sizing: border-box;
-} */
+}
 
 /* The Universal Selector */
 *, /* All elements*/
@@ -85,6 +85,7 @@ img {
   border-radius: 0;
   border: 0;
   opacity: 60%;
+  margin: 0 auto;
 }
 
 /* #bg:hover{

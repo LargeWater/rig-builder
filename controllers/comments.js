@@ -1,9 +1,6 @@
 import { Comment } from "../models/comment.js";
 import { Profile } from "../models/profile.js";
 
-function newComment(req, res) {
-
-}
 
 function create(req, res) {
   req.body.author = req.user.profile._id
@@ -25,6 +22,5 @@ function create(req, res) {
 }
 
 export {
-  newComment as new,
   create
 }

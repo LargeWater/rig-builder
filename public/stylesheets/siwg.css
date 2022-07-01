@@ -41,8 +41,3 @@
   position: absolute;
   width: 1px;
 }
-
-#logout{
-  visibility: hidden;
-  z-index: -1;
-}

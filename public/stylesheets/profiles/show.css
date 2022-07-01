@@ -1,13 +1,15 @@
-/* main {
-  font-size: 2em;
-} */
+main{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
 
 .form-group{
   font-size: 1.8rem;
 }
 
-#comment-id{
-  font-size: 1rem;
+#comment-id, #rating-id{
+  font-size: 2rem;
 }
 
 .card {
@@ -26,6 +28,7 @@
 
 .card-container{
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
 }
 

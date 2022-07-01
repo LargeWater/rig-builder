@@ -18,5 +18,44 @@
 main {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
+  /* flex-direction: row; */
+}
+
+.card-container{
+  display: flex;
+  flex-wrap: wrap; 
+}
+
+.card:hover{
+  animation-name: scale;
+  animation-duration: 10s;
+}
+@keyframes scale {
+  0% {
+    transform: scale(0.98);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.card::before {  
+  transform: scaleX(0);
+  transform-origin: bottom right;
+}
+
+.card:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.card::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  inset: 0 0 0 0;
+  background: #A15E49;
+  z-index: -1;
+  transition: transform .3s ease;
 }

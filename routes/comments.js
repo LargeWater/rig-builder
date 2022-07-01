@@ -4,7 +4,6 @@ import * as commentsCtrl from '../controllers/comments.js'
 
 const router = Router()
 
-router.get('/new', isLoggedIn, commentsCtrl.new)
 router.post('/', isLoggedIn, commentsCtrl.create) 
 
 export {
