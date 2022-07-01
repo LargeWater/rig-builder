@@ -20,7 +20,7 @@ main{
   display: flex;
   flex-wrap: wrap;
   /* font-size: 2em; */
-  background-color: #15616D;
+  background-color: #3485d6;
   border-radius: 5px;
   border: 1px solid #1C110A;
   box-shadow: 3px 2px 7px #1C110A;
@@ -34,14 +34,14 @@ main{
 
 .card-title,
 .card-text{
-  color: #FFECD1;
+  color: #1C110A;
 }
 
 .card-link{
   color: #FFECD1
 }
 .card-link:hover{
-  color: #A15E49;
+  color: #d68534;
 }
 
 .comment-id{

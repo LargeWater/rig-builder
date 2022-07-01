@@ -5,7 +5,7 @@
   margin: 2% auto;
   display: flex;
   /* font-size: 2em; */
-  background-color: #15616D;
+  background-color: #3485d6;
   color: #FFECD1;
   border-radius: 5px;
   border: 1px solid #1C110A;
@@ -13,7 +13,7 @@
 }
 
 .list-group-item {
-  background-color: #15616D;
+  background-color: #3485d6;
   color: #FFECD1;
   justify-content: left;
   align-items: left;
@@ -50,6 +50,7 @@ a:hover{
 .card:hover{
   animation-name: scale;
   animation-duration: 10s;
+  color:#1C110A;
 }
 @keyframes scale {
   0% {
@@ -76,7 +77,7 @@ a:hover{
   position: absolute;
   top: 0; right: 0; bottom: 0; left: 0;
   inset: 0 0 0 0;
-  background: #A15E49;
+  background: #d68534;
   z-index: -1;
   transition: transform .3s ease;
 }

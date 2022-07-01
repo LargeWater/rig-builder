@@ -8,7 +8,8 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-color: #FFECD1;
+  background-color: #3485d6;
+  color: #f4f4ec;
 }
 
 
@@ -30,7 +31,7 @@ h1{
   align-items: center;
   justify-content: center;
   text-align: center;
-  font-size: 3em;
+  font-size: 2.6em;
 }
 
 .card-deck{
@@ -40,8 +41,9 @@ h1{
 
 #delete-btn{
   background-color: #78290F;
-  color:#FFECD1;
+  color: #f4f4ec;
   border: 1px solid #1C110A;
+  font-size: 1em;
 }
 
 #delete-btn:hover{
@@ -50,6 +52,9 @@ h1{
   border: 1px solid #78290F;
 }
 
-a{
-  color: #78290F;
+#edit{
+  color: #d68534;;
+  margin: 10px;
+  padding: 1%;
+
 }

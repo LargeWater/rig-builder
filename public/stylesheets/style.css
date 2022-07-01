@@ -2,6 +2,7 @@ html {
   box-sizing: border-box;
 }
 
+
 /* The Universal Selector */
 *, /* All elements*/
 *::before, /* All ::before pseudo-elements */
@@ -17,19 +18,27 @@ html {
 }
 
 body {
-  background-color: #FFECD1;
+  background-color: #f4f4ec;
   /* Use a system font, if none are available use an available sans-sarif font */
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
     Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
   /* margin: 0; */
+  font-family: 'Sarabun', sans-serif;
 }
 
 nav {
-  background-color: #A15E49;
-  font-size: 1.6rem;
+  background-color: #d68534;
+  font-size: 2rem;
   /* display: flex; */
   /* justify-content: center; */
   border-bottom: 1px solid #1C110A;
+  color: #FFECD1;
+  padding: 0 15px;
+}
+
+.navbar-light, 
+.navbar-nav, 
+.nav-link{
   color: #FFECD1;
 }
 
@@ -51,31 +60,31 @@ h1 {
 img {
   border-radius: 50%;
   margin-right: 2%;
-  max-width: 40px;
-  max-height: 40px;
+  max-width: 50px;
+  max-height: 50px;
   border: 1px solid #1C110A;
 }
 
 #logout {
-  background-color: #15616D;
+  background-color: #3485d6;
   color: #FFECD1;
-  margin-left: 5%;
+  margin: 0 5%;
   border: 1px solid #1C110A;
 }
 #submit {
-  background-color: #15616D;
+  background-color: #3485d6;
   color: #FFECD1;
   border: 2px solid #1C110A;
 }
 
 #logout:hover {
-  color: #15616D;
-  background-color: #FFECD1;
+  color: #3485d6;
+  background-color: #d68534;
 }
 
 #submit:hover {
   color: #FFECD1;
-  background-color: #78290F;
+  background-color: #d68534;
 }
 
 #bg{
@@ -91,7 +100,6 @@ img {
 /* #bg:hover{
   opacity: 90%;
 } */
-
-.navbar-light{
-  color: #FFECD1;
+.navbar-light:hover .navbar-nav:hover .nav-link.active:hover, .navbar-light .navbar-nav .show>.nav-link:hover{
+  color: #f4f4ec;
 }
