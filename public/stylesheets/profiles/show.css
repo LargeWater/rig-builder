@@ -38,7 +38,8 @@ main{
 }
 
 .card-link{
-  color: #FFECD1
+  color: #FFECD1;
+  font-size: 1.5rem;
 }
 .card-link:hover{
   color: #d68534;
@@ -46,4 +47,39 @@ main{
 
 .comment-id{
   font-size: 1.2rem;
+}
+
+.card:hover{
+  animation-name: scale;
+  animation-duration: 10s;
+  color:#1C110A
+}
+@keyframes scale {
+  0% {
+    transform: scale(0.98);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.card::before {  
+  transform: scaleX(0);
+  transform-origin: bottom right;
+}
+
+.card:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.card::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  inset: 0 0 0 0;
+  background: #d68534;
+  z-index: -1;
+  transition: transform .3s ease;
 }
