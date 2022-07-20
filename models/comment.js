@@ -1,21 +1,21 @@
-import mongoose from 'mongoose'
+// import mongoose from 'mongoose'
 
-const Schema = mongoose.Schema
+// const Schema = mongoose.Schema
 
-const commentSchema = new Schema({
-  author: {type: Schema.Types.ObjectId, ref: "Profile"},
-  content: String,
-  rating: {
-    type: Number,
-    enum: [1, 2, 3, 4, 5]
-  },
-  profile: {type: Schema.Types.ObjectId, ref: "Profile"},
-}, {
-  timestamps: true,
-})
+// const commentSchema = new Schema({
+//   author: {type: Schema.Types.ObjectId, ref: "Profile"},
+//   content: String,
+//   rating: {
+//     type: Number,
+//     enum: [1, 2, 3, 4, 5]
+//   },
+//   profile: {type: Schema.Types.ObjectId, ref: "Profile"},
+// }, {
+//   timestamps: true,
+// })
 
-const Comment = mongoose.model('Comment', commentSchema)
+// const Comment = mongoose.model('Comment', commentSchema)
 
-export {
-  Comment
-}
+// export {
+//   Comment
+// }

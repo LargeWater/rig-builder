@@ -1,6 +1,6 @@
 import { Profile } from "../models/profile.js";
-// import { Gear } from "../models/gear.js";
-import { Comment } from '../models/comment.js'
+import { Gear } from "../models/gear.js";
+// import { Comment } from '../models/comment.js'
 
 function index(req, res) {
   Profile.find({})
@@ -20,7 +20,7 @@ function index(req, res) {
 function show(req, res) {
   Profile.findById(req.params.id)
   .populate('gear')
-  .populate('comments')
+  // .populate('comments')
   .then((profile) => {
     const isSelf = profile._id?.equals(req.user.profile._id);
     res.render("profiles/show", {
